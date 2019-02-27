@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.vinhteam.sendsms.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:text="Số điện thoại &lt;09xxxxxxxx&gt; &lt;Tên&gt;" />
+
+        <Button
+            android:id="@+id/cmdGetContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView"
+            android:text="ĐT" />
+
+        <EditText
+            android:id="@+id/txtSoDT"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/textView"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:text="09xxxxxxxx Nospam\n09xxxxxxxxx CNL" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSoDT"
+            android:background="@android:color/holo_blue_light"
+            android:text="Nội dung tin nhắn" />
+
+        <EditText
+            android:id="@+id/txtNoiDung"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/textView2"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:text="Năm mới chúc mừng anh %s vạn sự như ý." />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/txtNoiDung"
+            android:background="@android:color/darker_gray"
+            tools:text="bar" />
+
+        <TextView
+            android:id="@+id/txtLog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView3"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Log"
+            android:inputType="textMultiLine"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
